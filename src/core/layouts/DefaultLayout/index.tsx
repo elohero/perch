@@ -1,0 +1,101 @@
+import { Outlet, useNavigate } from 'react-router';
+import { Category, RouterPaths } from '@/core/types';
+import { useContext } from 'react';
+import { PriceContext } from '@/core/context';
+
+const DefaultLayout = () => {
+  const navigate = useNavigate();
+  const priceList: Category[] = useContext(PriceContext);
+
+  return (
+    <div className="wrapper">
+      <header>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container">
+            <a className="navbar-brand" onClick={ () => navigate(`${ RouterPaths.ROOT }`) } id="logoLink">
+              <img style={ { height: 75, width: 75 } } src="/images/logo.png" alt="logo"/>
+            </a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav mr-auto">
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Каталог
+                  </a>
+                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    { priceList.map((category) => (
+                      <a key={ category.id }
+                         className="dropdown-item"
+                         onClick={ () => navigate(`${ RouterPaths.ROOT }#${ category.id }`) }>
+                        { category.name }
+                      </a>
+                    )) }
+                  </div>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link"
+                     onClick={ () => navigate(`${ RouterPaths.ABOUT }`) }
+                     id="aboutLink">
+                    Про нас
+                  </a>
+                </li>
+              </ul>
+              <div className="menu-right justify-content-between d-flex">
+                <div className="menu-contact">
+                  <a href="tel:+380978751276">
+                    <img style={ { height: 20, width: 20 } } src="/images/phone.png" alt="phone"/>
+                    <span>+38 (097) 875-12-76</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <Outlet/>
+      </main>
+      <footer>
+        <div className="container">
+          <div className="footer-wrapper">
+            <div className="footer-left">
+              <div className="phones">
+                <div className="phone-item">
+                  <span>Мобільний телефон</span>
+                  <a href="tel:+380978751276">+38 (097) 875-12-76</a>
+                </div>
+                <div className="phone-item">
+                  <span>Viber</span>
+                  <a href="tel:+380978751276">+38 (097) 875-12-76</a>
+                </div>
+                <div className="phone-item">
+                  <span>Telegram</span>
+                  <a href="tel:+380978751276">+38 (097) 875-12-76</a>
+                </div>
+              </div>
+              <div className="work-email">
+                <a href="mailto:sinyavsky.i.s@ukr.net">Email: sinyavsky.i.s@ukr.net</a>
+              </div>
+            </div>
+            <div className="footer-right">
+              <div className="work-time">
+                Будні дні з 9:00 до 17:00
+              </div>
+            </div>
+          </div>
+          <div className="footer_bottom">
+            <span>@2023. Перчинка</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default DefaultLayout;
