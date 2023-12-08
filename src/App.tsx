@@ -18,7 +18,7 @@ function App() {
       const categories: Category[] = [];
       let lastCategoryIndex: number;
 
-      rawData.map((object) => Object.values(object as ArrayLike<unknown>)).slice(1)
+      rawData.map((object) => Object.values(object as ArrayLike<unknown>))
       .filter((row) => row.length > 0).filter((row) => row[0] !== ' ')
       .forEach((row, index, array) => {
         const isCategoryRow = typeof row[0] === 'string' && row[0].length > 1;

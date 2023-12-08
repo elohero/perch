@@ -13,7 +13,8 @@ const DefaultLayout = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
             <a className="navbar-brand" onClick={ () => navigate(`${ RouterPaths.ROOT }`) } id="logoLink">
-              <img style={ { height: 75, width: 75 } } src="/images/logo.png" alt="logo"/>
+              <img style={ { height: 200, width: 200 } } src="/images/logo.png" alt="logo"/>
+              <span>Додамо перчинки в ваше життя!</span>
             </a>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -48,9 +49,9 @@ const DefaultLayout = () => {
               </ul>
               <div className="menu-right justify-content-between d-flex">
                 <div className="menu-contact">
-                  <a href="tel:+380978751276">
+                  <a href="tel:+380681970101">
                     <img style={ { height: 20, width: 20 } } src="/images/phone.png" alt="phone"/>
-                    <span>+38 (097) 875-12-76</span>
+                    <span>+38 (068) 197-01-01</span>
                   </a>
                 </div>
               </div>
@@ -68,19 +69,19 @@ const DefaultLayout = () => {
               <div className="phones">
                 <div className="phone-item">
                   <span>Мобільний телефон</span>
-                  <a href="tel:+380978751276">+38 (097) 875-12-76</a>
+                  <a href="tel:+380681970101">+38 (068) 197-01-01</a>
                 </div>
                 <div className="phone-item">
                   <span>Viber</span>
-                  <a href="tel:+380978751276">+38 (097) 875-12-76</a>
+                  <a href="tel:+380681970101">+38 (068) 197-01-01</a>
                 </div>
                 <div className="phone-item">
                   <span>Telegram</span>
-                  <a href="tel:+380978751276">+38 (097) 875-12-76</a>
+                  <a href="tel:+380681970101">+38 (068) 197-01-01</a>
                 </div>
               </div>
               <div className="work-email">
-                <a href="mailto:sinyavsky.i.s@ukr.net">Email: sinyavsky.i.s@ukr.net</a>
+                <a href="mailto:perchynka_@ukr.net">Email: perchynka_@ukr.net</a>
               </div>
             </div>
             <div className="footer-right">

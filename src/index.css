@@ -12,14 +12,25 @@ html {
 }
 
 header {
-    background: #ffffff;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
     position: sticky;
     top: 0;
 }
 
+.bg-light {
+    background: #DC851F !important;
+}
+
 header .navbar-brand {
     margin-right: 38px;
+    position: relative;
+}
+
+header .navbar-brand > span {
+    font-size: 12px;
+    position: absolute;
+    right: -35px;
+    top: 120px;
 }
 
 header nav {
@@ -49,6 +60,7 @@ header .dropdown-item {
 header .navbar-light .navbar-nav .nav-item.dropdown a {
     position: relative;
     z-index: 1;
+
 }
 
 header .navbar-light .navbar-nav .nav-item .nav-link {
@@ -87,6 +99,11 @@ header .menu-contact img {
 .home-products {
     padding-top: 24px;
     flex: 1;
+    /*background-image: url("/public/images/background.png");*/
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
 }
 
 .home-products h3.all-products {
@@ -155,7 +172,7 @@ header .menu-contact img {
 .home-products .products-wrapper .product .price span {
     font-size: 12px;
     line-height: 23px;
-    color: #828282;
+    color: #000000
 }
 
 .home-products .pagination-block {
@@ -284,7 +301,7 @@ footer .footer-wrapper .footer-right .work-time {
     font-weight: normal;
     font-size: 22px;
     line-height: 26px;
-    color: #828282;
+    color: #000000
 }
 
 .page-content li {
@@ -292,11 +309,12 @@ footer .footer-wrapper .footer-right .work-time {
     font-weight: normal;
     font-size: 18px;
     line-height: 26px;
-    color: #828282;
+    color: #000000
 }
 
 .card {
     padding: 60px 0;
+    position: static;
 }
 
 .card .card-top {
@@ -352,7 +370,7 @@ footer .footer-wrapper .footer-right .work-time {
     font-weight: 500;
     font-size: 14.5px;
     line-height: 22px;
-    color: #C6C6C6;
+    color: #000000
 }
 
 .card .card-top .price b {
@@ -372,7 +390,7 @@ footer .footer-wrapper .footer-right .work-time {
     font-weight: 500;
     font-size: 14.5px;
     line-height: 22px;
-    color: #C6C6C6;
+    color: #000000
 }
 
 .card .card-top .weight b {
@@ -403,12 +421,9 @@ footer .footer-wrapper .footer-right .work-time {
 .card .card-bottom .card-info p {
     font-size: 18px;
     line-height: 19px;
-    color: #828282;
+    color: #000000
 }
 
-main:not([class]) {
-    padding-bottom: 80px;
-}
 
 a {
     cursor: pointer;
