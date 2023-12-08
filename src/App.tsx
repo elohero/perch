@@ -24,7 +24,8 @@ function App() {
         const isCategoryRow = typeof row[0] === 'string' && row[0].length > 1;
         if (isCategoryRow || index === array.length - 1) {
           if (lastCategoryIndex !== undefined) {
-            const spices = array.slice(lastCategoryIndex + 1, index).map((row) => {
+            const currentIndex = index + (index === array.length - 1 ? 1 : 0);
+            const spices = array.slice(lastCategoryIndex + 1, currentIndex).map((row) => {
               const [id, name, price, description, imagePath, weight] = row;
               return { id, name, price, description, imagePath, weight } as Spice;
             });
