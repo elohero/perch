@@ -9,6 +9,11 @@ html {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url("/public/images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 header {
@@ -18,7 +23,7 @@ header {
 }
 
 .bg-light {
-    background: #DC851F !important;
+    background: #fee6a5 !important;
 }
 
 header .navbar-brand {
@@ -92,18 +97,19 @@ header .menu-contact a {
     text-decoration: none;
 }
 
-header .menu-contact img {
-    margin-top: -5px;
+.menu-right {
+    display: flex;
+    justify-content: space-between;
 }
 
 .home-products {
     padding-top: 24px;
     flex: 1;
-    /*background-image: url("/public/images/background.png");*/
-    /*background-attachment: fixed;*/
-    /*background-size: cover;*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: center;*/
+    background-image: url("/public/images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .home-products h3.all-products {
@@ -127,7 +133,7 @@ header .menu-contact img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    row-gap: 16px;
+    row-gap: 8px;
     cursor: pointer;
 }
 
@@ -315,6 +321,11 @@ footer .footer-wrapper .footer-right .work-time {
 .card {
     padding: 60px 0;
     position: static;
+    background-image: url("/public/images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .card .card-top {
@@ -338,10 +349,12 @@ footer .footer-wrapper .footer-right .work-time {
 
 .card .card-top .card-sidebar {
     width: 30%;
-    background: #FFFFFF;
-    box-shadow: 0 0 27px rgba(0, 0, 0, 0.06);
-    border-radius: 15px;
-    padding: 30px;
+    padding: 35px;
+    background-image: url("/public/images/card-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .card .card-top .title {
@@ -350,6 +363,7 @@ footer .footer-wrapper .footer-right .work-time {
     line-height: 23px;
     color: #000000;
     margin-bottom: 50px;
+    margin-top: 40px;
 }
 
 .product .price {

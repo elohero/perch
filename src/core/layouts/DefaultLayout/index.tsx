@@ -47,12 +47,20 @@ const DefaultLayout = () => {
                   </a>
                 </li>
               </ul>
-              <div className="menu-right justify-content-between d-flex">
+              <div className="menu-right">
                 <div className="menu-contact">
-                  <a href="tel:+380681970101">
-                    <img style={ { height: 20, width: 20 } } src="/images/phone.png" alt="phone"/>
-                    <span>+38 (068) 197-01-01</span>
-                  </a>
+                  <div className="first-number">
+                    <a href="tel:+380986745050">
+                      <img style={ { height: 20, width: 20 } } src="/images/phone.png" alt="phone"/>
+                      <span>+38 (098) 674-50-50</span>
+                    </a>
+                  </div>
+                  <div className="second-number">
+                    <a href="tel:+380681970101">
+                      <img style={ { height: 20, width: 20 } } src="/images/phone.png" alt="phone"/>
+                      <span>+38 (068) 197-01-01</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -69,6 +77,7 @@ const DefaultLayout = () => {
               <div className="phones">
                 <div className="phone-item">
                   <span>Мобільний телефон</span>
+                  <a href="tel:+380986745050">+38 (098) 674-50-50</a>
                   <a href="tel:+380681970101">+38 (068) 197-01-01</a>
                 </div>
                 <div className="phone-item">
