@@ -1,11 +1,12 @@
 import { Outlet, useNavigate } from 'react-router';
 import { Category, RouterPaths } from '@/core/types';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { PriceContext } from '@/core/context';
 
 const DefaultLayout = () => {
   const navigate = useNavigate();
   const priceList: Category[] = useContext(PriceContext);
+  const [isMenuActive, setIsMenuActive] = useState<boolean>(false);
 
   return (
     <div className="wrapper">
@@ -13,12 +14,10 @@ const DefaultLayout = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
             <a className="navbar-brand" onClick={ () => navigate(`${ RouterPaths.ROOT }`) } id="logoLink">
-              <img style={ { height: 200, width: 200 } } src="/images/logo.png" alt="logo"/>
+              <img style={ { height: 50, width: 200 } } src="/images/logo.png" alt="logo"/>
               <span>Додамо перчинки в ваше життя!</span>
             </a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler" type="button" onClick={() => setIsMenuActive(!isMenuActive)}>
               <span className="navbar-toggler-icon"></span>
             </button>
 
@@ -66,6 +65,19 @@ const DefaultLayout = () => {
             </div>
           </div>
         </nav>
+        <div className="mobile-menu" style = {{display: isMenuActive ? 'block' : 'none'}}>
+          <nav className="nav" id="nav" onClick={() => setIsMenuActive(false)}>
+            <a className="nav__link" onClick={ () => navigate(`${ RouterPaths.ROOT }`) }>Каталог</a>
+            { priceList.map((category) => (
+                <a key={ category.id }
+                   className="nav__link nav__link--small"
+                   onClick={ () => navigate(`${ RouterPaths.ROOT }#${ category.id }`) }>
+                  { category.name }
+                </a>
+            )) }
+            <a className="nav__link" onClick={ () => navigate(`${ RouterPaths.ABOUT }`) }>Про нас</a>
+          </nav>
+        </div>
       </header>
       <main>
         <Outlet/>
