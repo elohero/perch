@@ -123,8 +123,8 @@ header .menu-contact a {
 
 .home-products .products-wrapper {
     display: flex;
-    justify-content: space-between;
-    row-gap: 25px;
+    justify-content: flex-start;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
