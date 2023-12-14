@@ -68,6 +68,10 @@ header .navbar-light .navbar-nav .nav-item.dropdown a {
 
 }
 
+header .dropdown-menu {
+    background: #FEE6A5;
+}
+
 header .navbar-light .navbar-nav .nav-item .nav-link {
     font-style: normal;
     font-weight: 500;
@@ -350,7 +354,7 @@ footer .footer-wrapper .footer-right .work-time {
     width: 30%;
     padding: 35px;
     background-image: url("/public/images/card-background.png");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
