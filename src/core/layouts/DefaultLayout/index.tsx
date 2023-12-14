@@ -94,10 +94,12 @@ const DefaultLayout = () => {
                 </div>
                 <div className="phone-item">
                   <span>Viber</span>
+                  <a href="tel:+380986745050">+38 (098) 674-50-50</a>
                   <a href="tel:+380681970101">+38 (068) 197-01-01</a>
                 </div>
                 <div className="phone-item">
                   <span>Telegram</span>
+                  <a href="tel:+380986745050">+38 (098) 674-50-50</a>
                   <a href="tel:+380681970101">+38 (068) 197-01-01</a>
                 </div>
               </div>

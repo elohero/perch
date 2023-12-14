@@ -1,16 +1,19 @@
-import { useEffect, useState } from 'react';
+import {lazy, useEffect, useState} from 'react';
 import { read, utils } from 'xlsx';
 import { PriceContext } from '@/core/context';
 import { Category, Spice } from '@/core/types';
-import LoadingLayout from '@/core/layouts/LoadingLayout';
 import AppRoutes from '@/core/routes';
+
+const LoadingLayout = lazy(
+    () => import('@/core/layouts/LoadingLayout'),
+);
 
 function App() {
   const [priceList, setPriceList] = useState<Category[]>([]);
 
   useEffect(() => {
     (async function () {
-      const sheet = await fetch('/price.xlsx');
+      const sheet = await fetch(`/price.xlsx?t=${Date.now()}`);
       const arrayBuffer = await sheet.arrayBuffer();
       const workbook = read(arrayBuffer, { type: 'buffer' });
       const rawData = utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
