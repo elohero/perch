@@ -100,7 +100,7 @@ const DefaultLayout = () => {
             </div>
           </div>
           <div className="footer_bottom">
-            <span>@2023. Перчинка</span>
+            <span>&copy; Перчинка - 2023</span>
           </div>
         </div>
       </footer>
